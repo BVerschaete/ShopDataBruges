@@ -3,8 +3,16 @@
  */
 var URI = "http://loc.geopunt.be/geolocation/location?latlon=";
 
-var coords = "51.196873,3.254300";
+function test(){
 
-var URL = URI + coords;
+    var coords = "51.196873,3.254300";
 
-var JSONObject = jQuery.getJSON(URL);
+    var URL = URI + coords;
+
+    var JSONString = "";
+    
+    $.getJSON(URL, function(data){
+        JSONString = data;
+        console.log(JSONString["LocationResult"][0]["FormattedAddress"]);
+    });
+}
