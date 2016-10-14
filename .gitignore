@@ -1,5 +1,6 @@
-*
-
-!.gitignore
-!www/
-!www/*
+hooks
+platforms
+plugins
+config.xml
+LICENSE
+README.md
