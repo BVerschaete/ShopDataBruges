@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="772c2d81-bc91-498c-90ba-dec37880bf24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/index.js" afterPath="$PROJECT_DIR$/www/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www/js/requestJsonFromServer.js" afterPath="$PROJECT_DIR$/www/js/requestJsonFromServer.js" />
-    </list>
+    <list default="true" id="772c2d81-bc91-498c-90ba-dec37880bf24" name="Default" comment="" />
     <ignored path="ShopDataBruges.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -303,12 +299,12 @@
       <option name="presentableId" value="Default" />
       <updated>1476435385005</updated>
       <workItem from="1476435386962" duration="122000" />
-      <workItem from="1476435520660" duration="5089000" />
+      <workItem from="1476435520660" duration="5238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5211000" />
+    <option name="totallyTimeSpent" value="5360000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
