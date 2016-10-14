@@ -3,15 +3,16 @@
  */
 var URI = "http://loc.geopunt.be/geolocation/location?latlon=";
 
-function getJSON(coordinates){
+
+function getJSON(coordinates, callback){
 
     var URL = URI + coordinates;
-
-    var JSONString = "";
-    
     $.getJSON(URL, function(data){
-        JSONString = data;
-        var string = JSONString["LocationResult"][0]["FormattedAddress"];
-        $("#result").text(string);
+        var location = data["LocationResult"][0]["FormattedAddress"];
+        if(callback) {
+            callback(location);
+        } else {
+            return location;
+        }
     });
 }

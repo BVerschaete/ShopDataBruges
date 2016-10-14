@@ -22,8 +22,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <script type="text/javascript" src="cordova.js"></script>
         <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
@@ -32,11 +32,26 @@
         <script type="text/javascript" src="js/LocationFromGps.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/requestJsonFromServer.js"></script>
-        <title>Hello World</title>
+        <script src="js/shopToJson.js"></script>
+        <title>Welcome</title>
     </head>
     <body>
-        <div>
-            <p id="result"></p>
+        <div data-role="page">
+            <div data-role="header" style="overflow:hidden;">
+                <h1>Add a shop</h1>
+                <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
+            </div>
+            <div id="map"></div>
+            <!-- Replace the value of the key parameter with your own API key. -->
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9-vaebzxO_l2tcgvgGa7HDFYTuh2pryA&callback=initMap" async defer></script>
+            <div class="container" id="addShopContainer">
+                <label for="shopName">Name shop</label>
+                <input id="shopName" type="text"/>
+                <label for="shopDescription">Description</label>
+                <input id="shopDescription" type="text"/>
+                <button id="submitShop" data-role="button">Submit for review</button>
+            </div>
+            <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
         </div>
     </body>
 </html>

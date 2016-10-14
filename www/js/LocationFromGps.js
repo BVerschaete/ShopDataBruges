@@ -1,18 +1,19 @@
 /**
  * Created by jeroom on 14/10/2016.
  */
-var x;
 
-function getLocation() {
+function getLocation(callback) {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(function(position){
+            var latlon = position.coords.latitude + "," + position.coords.longitude;
+            if(callback){
+                callback(latlon)
+            }
+            return latlon;
+        });
     } else {
-        x = "Geolocation is not supported by this browser.";
+        return "GPS Not enabled";
     }
-}
-function showPosition(position) {
-    x = position.coords.latitude + "," + position.coords.longitude;
-    getJSON(x);
 }
 
 
