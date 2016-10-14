@@ -1,0 +1,21 @@
+﻿#hdrAwardPage {
+    height: 45px;
+}
+
+#score {
+    width: 100%;
+    height: 45px;
+}
+
+
+img {
+    margin: 10px;
+}
+
+body {
+    overflow: hidden;
+}
+
+#popupDialog {
+    width: 300px;
+}

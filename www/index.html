@@ -7,6 +7,8 @@
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/pageOverview.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/awardPage.css">
+        <script src="https://use.fontawesome.com/c2ccb1fd71.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9-vaebzxO_l2tcgvgGa7HDFYTuh2pryA" async defer></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -54,37 +56,39 @@
             <h1>AppLab 2016 - &copy; Bits Please</h1>
         </div>
     </div>
+
     <div data-role="page" id="start">
-        <div data-role="header" id="hdrOverview">
-            <h1>b-data shopping</h1>
+        <div data-role="header" id="hdrOverview" data-theme="b">
+            <h1>MENU</h1>
             <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
         </div>
         <div role="main" class="ui-content container" style="position: relative">
-            <img src="img/Applogotransparant.png"/>
+            <img id="logoMenu" src="img/Applogotransparant.png"/>
             <div class="pgOverviewBtns">
-                <a href="#shopCreation" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
-                <a href="#pgFindShop" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
-                <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
+                <a href="#shopCreation" class=uit-btn-left"><i class="fa fa-plus-circle fa-5x"></i></a>
+                <a href="#pgFindShop" id="middensteBtn"><i class="fa fa-search fa-5x"></i></a>
+                <a href="#awardPage" class="ui-btn-right"><i class="fa fa-shopping-bag fa-5x"></i></a>
             </div>
         </div>
 
         <div data-role="footer">
-            <h1 class="footer" align="center">bdata</h1>
+            <h1 class="footer" align="center">AppLab 2016 - &copy; Bits Please</h1>
         </div>
     </div>
+
     <div data-role="page" id="shopCreation">
-        <div data-role="header" style="overflow:hidden;">
-            <h1>Add a shop</h1>
+        <div data-role="header" style="overflow:hidden;" data-theme="b">
+            <h1>ADD SHOP</h1>
             <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
         </div>
         <div id="map_addshop"></div>
         <div class="container" id="addShopContainer">
-            <label for="shopName">Name shop</label>
+            <label for="shopName">Name Shop:</label>
             <input id="shopName" type="text"/>
-            <label for="shopDescription">Description</label>
+            <label for="shopDescription">Description:</label>
             <input id="shopDescription" type="text"/>
             <div class="ui-field-contain">
-                <label for="select-custom-1">Type</label>
+                <label for="select-custom-1">Type:</label>
                 <select name="select-custom-1" id="select-custom-1" data-native-menu="false">
                     <option value="Beautyzaak">Beautyzaak</option>
                     <option value="Chocolatier">Chocolatier</option>
@@ -103,10 +107,14 @@
             <button id="submitShop" data-role="button">Submit for review</button>
         </div>
         <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
+        <div data-role="footer">
+            <h1 class="footer" align="center">AppLab 2016 - &copy; Bits Please</h1>
+        </div>
     </div>
+
     <div data-role="page" id="pgFindShop">
-        <div data-role="header" style="overflow:hidden;">
-            <h1>Find a shop</h1>
+        <div data-role="header" style="overflow:hidden;" data-theme="b">
+            <h1>FIND SHOP</h1>
             <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
         </div>
         <input data-type="search" placeholder="Find a shop nearby" id="txtSearch" >
@@ -135,6 +143,46 @@
             <tr><td>Supermarkt</td><td>Proxy Delhaize</td><td>Noordzandstraat 4</td><td>Brugge</td><td>Verse producten zijn onze specialiteit.</td></tr>
             </tbody>
         </table>
+        <div data-role="footer">
+            <h1 class="footer" align="center">AppLab 2016 - &copy; Bits Please</h1>
+        </div>
+    </div>
+	<div data-role="page" id="awardPage">
+        <div data-role="header" id="hdrAwardPage">
+            <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
+            <h1>rewards</h1>
+        </div>
+        <div data-role="main">
+            <center><h1>Points: 69</h1> <span id="spanPoints"> </span></center>
+            <div id="avatars" style="padding: 10px;">
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/1.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/2.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/3.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/4.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/5.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/6.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/7.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/8.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/9.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/10.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/11.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/12.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/13.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/14.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/15.png" /></a>
+                <a href="#popupDialog" data-rel="popup" data-position-to="window" data-transition="pop"><img src="img/16.png" /></a>
+                <div data-role="popup" id="popupDialog" data-dismissible="false">
+                    <div data-role="header">
+                        <h1>Buy icon for:</h1>
+                    </div>
+                    <div role="main" class="ui-content">
+                        <center><h3 class="ui-title">5 points?</h3></center>
+                        <a href="#" class="ui-btn ui-corner-all" data-rel="back">Cancel</a>
+                        <a href="#" class="ui-btn ui-corner-all" data-rel="back">Buy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     </body>
 </html>
