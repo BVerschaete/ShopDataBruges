@@ -9,5 +9,8 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="jquery-2.2.2" level="application" />
     <orderEntry type="library" name="jquery.mobile-1.4.5" level="application" />
+    <orderEntry type="library" name="jquery-2.2.2" level="application" />
+    <orderEntry type="library" name="jquery.mobile-1.4.5" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
   </component>
 </module>

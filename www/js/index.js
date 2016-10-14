@@ -1,6 +1,6 @@
 function deviceReady(){
-    //plaats hier functies die je wil testen
-    
+    console.log("deviceReady")
+    getLocation();
 }
 
 $(document).on("deviceready", deviceReady);
