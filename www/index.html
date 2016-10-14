@@ -37,7 +37,26 @@
         <title>Welcome</title>
     </head>
     <body>
-        <div data-role="page">
+        <div data-role="page" id="pgOverview">
+            <div data-role="header" id="hdrOverview">
+                <h1>jerryfreshprince</h1>
+                <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+            </div>
+            <div role="main" class="ui-content" style="position: relative">
+                <div id="map_canvas"> </div>
+
+                <div class="pgOverviewBtns">
+                    <a href="#shopCreation" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
+                    <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
+                    <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
+                </div>
+            </div>
+
+            <div data-role="footer">
+                <h1 class="footer" align="center">bdata</h1>
+            </div>
+        </div>
+        <div data-role="page" id="shopCreation">
             <div data-role="header" style="overflow:hidden;">
                 <h1>Add a shop</h1>
                 <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
@@ -54,24 +73,5 @@
             </div>
             <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
         </div>
-    <div data-role="page" id="pgOverview">
-        <div data-role="header" id="hdrOverview">
-            <h1>jerryfreshprince</h1>
-            <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
-        </div>
-        <div role="main" class="ui-content" style="position: relative">
-            <div id="map_canvas"> </div>
-
-            <div class="pgOverviewBtns">
-                <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
-                <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
-                <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
-            </div>
-        </div>
-
-        <div data-role="footer">
-            <h1 class="footer" align="center">bdata</h1>
-        </div>
-    </div>
     </body>
 </html>
