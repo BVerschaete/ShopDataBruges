@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
@@ -28,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/pageOverview.css">
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9-vaebzxO_l2tcgvgGa7HDFYTuh2pryA" async defer></script>
         <script type="text/javascript" src="cordova.js"></script>
-        <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/LocationFromGps.js"></script>
@@ -38,38 +18,67 @@
         <title>Welcome</title>
     </head>
     <body>
-        <div data-role="page" id="start">
-            <div data-role="header" id="hdrOverview">
-                <h1>jerryfreshprince</h1>
-                <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+    <div id="login" data-role="page">
+        <div data-role="header">
+            <h1>b-data shopping</h1>
+        </div>
+        <div class="container">
+            <label for="username">Username</label>
+            <input type="text" id="username"/>
+            <label for="password">Password</label>
+            <input type="text" id="password"/>
+            <a href="#start" data-role="button">Log in</a>
+        </div>
+    </div>
+    <div data-role="page" id="start">
+        <div data-role="header" id="hdrOverview">
+            <h1>b-data shopping</h1>
+            <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+        </div>
+        <div role="main" class="ui-content container" style="position: relative">
+            <img src="img/Applogotransparant.png"/>
+            <div class="pgOverviewBtns">
+                <a href="#shopCreation" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
+                <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
+                <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
             </div>
-            <div role="main" class="ui-content" style="position: relative">
-                <img src="img/Applogotransparant.png"/>
-                <div class="pgOverviewBtns">
-                    <a href="#shopCreation" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
-                    <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
-                    <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
-                </div>
-            </div>
+        </div>
 
-            <div data-role="footer">
-                <h1 class="footer" align="center">bdata</h1>
-            </div>
+        <div data-role="footer">
+            <h1 class="footer" align="center">bdata</h1>
         </div>
-        <div data-role="page" id="shopCreation">
-            <div data-role="header" style="overflow:hidden;">
-                <h1>Add a shop</h1>
-                <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
-            </div>
-            <div id="map_addshop"></div>
-            <div class="container" id="addShopContainer">
-                <label for="shopName">Name shop</label>
-                <input id="shopName" type="text"/>
-                <label for="shopDescription">Description</label>
-                <input id="shopDescription" type="text"/>
-                <button id="submitShop" data-role="button">Submit for review</button>
-            </div>
-            <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
+    </div>
+    <div data-role="page" id="shopCreation">
+        <div data-role="header" style="overflow:hidden;">
+            <h1>Add a shop</h1>
+            <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
         </div>
+        <div id="map_addshop"></div>
+        <div class="container" id="addShopContainer">
+            <label for="shopName">Name shop</label>
+            <input id="shopName" type="text"/>
+            <label for="shopDescription">Description</label>
+            <input id="shopDescription" type="text"/>
+            <div class="ui-field-contain">
+                <label for="select-custom-1">Type</label>
+                <select name="select-custom-1" id="select-custom-1" data-native-menu="false">
+                    <option value="Beautyzaak">Beautyzaak</option>
+                    <option value="Chocolatier">Chocolatier</option>
+                    <option value="Drankcentrale">Drankcentrale</option>
+                    <option value="Elektronicazaak">Elektronicazaak</option>
+                    <option value="Kledingzaak">Kledingzaak</option>
+                    <option value="Meubelzaak">Meubelzaak</option>
+                    <option value="Nachtwinkel">Nachtwinkel</option>
+                    <option value="Schoenenzaak">Schoenenzaak</option>
+                    <option value="Seksshop">Seksshop</option>
+                    <option value="Souvenirzaak">Souvenirzaak</option>
+                    <option value="Sportzaak">Sportzaak</option>
+                    <option value="Supermarkt">Supermarkt</option>
+                </select>
+            </div>
+            <button id="submitShop" data-role="button">Submit for review</button>
+        </div>
+        <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
+    </div>
     </body>
 </html>
