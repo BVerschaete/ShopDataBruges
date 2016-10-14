@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="css/pageOverview.css">
         <script type="text/javascript" src="cordova.js"></script>
         <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
         <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -32,11 +33,28 @@
         <script type="text/javascript" src="js/LocationFromGps.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/requestJsonFromServer.js"></script>
-        <title>Hello World</title>
+
+        <title>Brugge</title>
     </head>
     <body>
-        <div>
-            <p id="result"></p>
+    <div data-role="page" id="pgOverview">
+            <div data-role="header" id="hdrOverview">
+                <h1>jerryfreshprince</h1>
+                <a href="#" class="ui-btn ui-btn-right ui-icon-home ui-btn-icon-notext ui-corner-all"></a>
+            </div>
+            <div role="main" class="ui-content" style="position: relative">
+                <div id="map_canvas"> </div>
+
+                <div class="pgOverviewBtns">
+                    <a href="#" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
+                    <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
+                    <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
+                </div>
+            </div>
+
+            <div data-role="footer">
+                <h1 class="footer" align="center">bdata</h1>
+            </div>
         </div>
     </body>
 </html>
