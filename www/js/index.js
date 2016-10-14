@@ -1,6 +1,4 @@
 function deviceReady(){
-    test();
-    console.log("deviceReady");
     getLocation();
 }
 
