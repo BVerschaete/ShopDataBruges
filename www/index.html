@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
         <link rel="stylesheet" type="text/css" href="css/pageOverview.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9-vaebzxO_l2tcgvgGa7HDFYTuh2pryA" async defer></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -15,19 +16,42 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/requestJsonFromServer.js"></script>
         <script src="js/shopToJson.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/splash.js"></script>
         <title>Welcome</title>
     </head>
     <body>
-    <div id="login" data-role="page">
-        <div data-role="header">
-            <h1>b-data shopping</h1>
+    <div data-role="page" data-theme="b" id="splash" style="background-color: #fff;">
+        <div class="splash">
+            <center><img src="img/Applogotransparant.png" alt="splash" /></center>
+            <center>
+                <div class="bubblingG">
+	            <span id="bubblingG_1">
+	            </span>
+	            <span id="bubblingG_2">
+                </span>
+	            <span id="bubblingG_3">
+	            </span>
+                </div>
+            </center>
         </div>
-        <div class="container">
-            <label for="username">Username</label>
-            <input type="text" id="username"/>
-            <label for="password">Password</label>
-            <input type="text" id="password"/>
-            <a href="#start" data-role="button">Log in</a>
+    </div>
+    <div data-role="page" id="login">
+        <div data-role="header" data-theme="b">
+            <h1>LOGIN</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <form id="frmLogin">
+                <label for="txtLoginName">Login name:</label>
+                <input type="text" name="txtLoginName" id="txtLoginName" value="">
+                <label for="txtPassword">Password:</label>
+                <input type="text" name="txtPassword" id="txtPassword" value="">
+                <a href="#start" class="ui-btn ui-shadow" style="color:black; text-decoration: none;">Login</a>
+            </form>
+        </div>
+
+        <div data-role="footer">
+            <h1>AppLab 2016 - &copy; Bits Please</h1>
         </div>
     </div>
     <div data-role="page" id="start">
@@ -39,7 +63,7 @@
             <img src="img/Applogotransparant.png"/>
             <div class="pgOverviewBtns">
                 <a href="#shopCreation" class="ui-btn ui-icon-plus ui-btn-icon-notext ui-corner-all uit-btn-left"></a>
-                <a href="#" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
+                <a href="#pgFindShop" class="ui-btn ui-icon-search ui-btn-icon-notext ui-corner-all" id="middensteBtn"></a>
                 <a href="#" class="ui-btn ui-icon-shop ui-btn-icon-notext ui-corner-all ui-btn-right"></a>
             </div>
         </div>
@@ -79,6 +103,38 @@
             <button id="submitShop" data-role="button">Submit for review</button>
         </div>
         <p id="error">Oops, an error has occurred! Either your GPS is not enabled or you are not in Bruges near an address!</p>
+    </div>
+    <div data-role="page" id="pgFindShop">
+        <div data-role="header" style="overflow:hidden;">
+            <h1>Find a shop</h1>
+            <a data-rel="back" class="ui-btn-left" data-icon="arrow-l">Back</a>
+        </div>
+        <input data-type="search" placeholder="Find a shop nearby" id="txtSearch" >
+        <table data-role="table" id="ShopTable" data-filter="true" data-input="#txtSearch" class="ui-responsive">
+            <thead>
+            <tr>
+                <th data-priority="1"> Category</th>
+                <th data-priority="2"> Name</th>
+                <th data-priority="3"> Address</th>
+                <th data-priority="4"> City</th>
+                <th data-priority="5"> Discription</th>
+            </tr>
+
+            <tbody>
+            <tr><td>Beautyzaak</td><td>Yves Rocher</td><td>Steenstraat 37</td><td>Brugge</td><td>Groot assortiment met verzorgingsproducten.</td></tr>
+            <tr><td>Chocolatier</td><td>Leonidas</td><td>Steenstraat 4</td><td>Brugge</td><td>Heerlijke Belgische chocolade.</td></tr>
+            <tr><td>Drankcentrale</td><td>Vanhyfte bvba</td><td>Koggenstraat 8</td><td>Brugge</td><td>Ruime keuze uit verschillende dranken met een snelle leveringsservice.</td></tr>
+            <tr><td>Electronicazaak</td><td>Profilec Electro</td><td>Monnikenwerve 9</td><td>Brugge</td><td>Electrische huishoudapparaten en nog veel meer.</td></tr>
+            <tr><td>Kledingzaak</td><td>Boetiek Ruth</td><td>Sint-Jakobsstraat 56</td><td>Brugge</td><td>Elegante kleding en modieuze ontwerpen.</td></tr>
+            <tr><td>Meubelzaak</td><td>Meubelzaak Salvator</td><td>Monnikenwerve 81</td><td>Brugge</td><td>Meubelen voor een modern en stijlvol interieur.</td></tr>
+            <tr><td>Nachtwinkel</td><td>P3</td><td>Rijselstraat 76</td><td>Brugge</td><td>Basisbenodigdheden en open tot laat in de nacht.</td></tr>
+            <tr><td>Schoenenzaak</td><td>Paris Londres</td><td>Zuidzandstraat 11</td><td>Brugge</td><td>Assortiment voor jong en oud.</td></tr>
+            <tr><td>Eroticazaak</td><td>Pabo</td><td>Maalse Steenweg 157</td><td>Brugge</td><td>Seksueel getinte merchandise voor heel het gezin.</td></tr>
+            <tr><td>Souvenirzaak</td><td>Souvenirs Moret</td><td>Vlamingstraat 1</td><td>Brugge</td><td>Een aandenken aan het mooie Brugge vindt u hier.</td></tr>
+            <tr><td>Sportzaak</td><td>Decathlon</td><td>Blankenbergse Steenweg 420</td><td>Brugge</td><td>Groot aanbod voor verschillende sporten. </td></tr>
+            <tr><td>Supermarkt</td><td>Proxy Delhaize</td><td>Noordzandstraat 4</td><td>Brugge</td><td>Verse producten zijn onze specialiteit.</td></tr>
+            </tbody>
+        </table>
     </div>
     </body>
 </html>

@@ -1,4 +1,5 @@
 function deviceReady(){
+    setup();
     $("#submitShop").click(addShop);
 }
 
